@@ -67,6 +67,10 @@ namespace MHA.WebAPI.Controllers
             {
                 return BadRequest("Grocery Item can not be null");
             }
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
             GroceryItemsRepository gcItemRepository = new GroceryItemsRepository();
             GroceryItem newgcItem = gcItemRepository.Save(gcItem);
             if (newgcItem == null)
@@ -85,6 +89,10 @@ namespace MHA.WebAPI.Controllers
             if (gcItem == null)
             {
                 return BadRequest("Grocery item can not be null");
+            }
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
             }
             GroceryItemsRepository gcItemRepository = new GroceryItemsRepository();
             GroceryItem updatedGcItem = gcItemRepository.Save(id, gcItem);

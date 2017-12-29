@@ -8,7 +8,8 @@
                 console.log('Inside GrocerySaveController method');
                 var self = this;
                 self.groceyItems = {};
-                groceryItemsResource.get({id:2}, function grcitemsave(data) {
+
+                groceryItemsResource.get({ id: 0 }, function grcitemsave(data) {
                     console.log('Inside grcitemsave method');
                     self.groceyItems = data;
                     self.originalItem = angular.copy(data);
@@ -16,6 +17,7 @@
                     function (response) {
                         console.log(response.statusText)
                     });
+
                 if (self.groceyItems && self.groceyItems.id)
                 {
                     self.Title = "Edit Grocery Item";
@@ -44,6 +46,15 @@
                                     console.log(response.data.exceptionMessage);
                                     console.log(response.data.stackTrace);
                                 }
+                                if (response.data.modelState)
+                                {
+                                    for (var key in response.data.modelState)
+                                    {
+                                        self.message += response.data.modelState[key] + '\r\n';
+                                    }
+                                    console.log(self.message);
+                                    self.message = '';
+                                }
                             })
                     }
 
@@ -58,6 +69,13 @@
                                 if (response.data.exceptionMessage) {
                                     console.log(response.data.exceptionMessage);
                                     console.log(response.data.stackTrace);
+                                }
+                                if (response.data.modelState) {
+                                    for (var key in response.data.modelState) {
+                                        self.message += response.data.modelState[key] + '\r\n';
+                                    }
+                                    console.log(self.message);
+                                    self.message = '';
                                 }
                             })
                     }

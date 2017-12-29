@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace MHA.WebAPI.Models
 {
     public class GroceryItem
     {
         public int Id { get; set; }
+
+        [MaxLength(11,ErrorMessage ="You exceeded max length of 11")]
+        [MinLength(5,ErrorMessage ="You need to enter at least 5 characters")]
+        [Required]
         public string Name { get; set; }
         public decimal Price { get; set; }
         public int Quantity { get; set; }
