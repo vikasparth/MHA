@@ -1,0 +1,62 @@
+[
+  {
+    "Id": 1,
+    "Name": "Atta",
+    "Price": 10.0,
+    "Quantity": 1,
+    "MoreInfo": "This will be used for making Rotis",
+    "MeasuredBy": "Weight",
+    "WeightUnit": "Kilogram",
+    "Category": "FoodItem",
+    "RegularItem": true,
+    "FrequencyInDays": 30,
+    "Brand": null,
+    "Image": null,
+    "PreferredStore": null
+  },
+  {
+    "Id": 2,
+    "Name": "MustardOil",
+    "Price": 4.0,
+    "Quantity": 1,
+    "MoreInfo": "This will be used for making Rotis",
+    "MeasuredBy": "Packet",
+    "WeightUnit": "NA",
+    "Category": "FoodItem",
+    "RegularItem": true,
+    "FrequencyInDays": 45,
+    "Brand": "Dabur",
+    "Image": "URL to be provided here",
+    "PreferredStore": "Kishore ki Dukaan"
+  },
+  {
+    "Id": 3,
+    "Name": "ToiletCleaner",
+    "Price": 5.0,
+    "Quantity": 1,
+    "MoreInfo": "This will be used for cleaning Toilet",
+    "MeasuredBy": "Volume",
+    "WeightUnit": "Litre",
+    "Category": "CleaningItem",
+    "RegularItem": true,
+    "FrequencyInDays": 30,
+    "Brand": null,
+    "Image": null,
+    "PreferredStore": null
+  },
+  {
+    "Id": 4,
+    "Name": "PlayStation",
+    "Price": 298.0,
+    "Quantity": 0,
+    "MoreInfo": "This is gaming console",
+    "MeasuredBy": "unit",
+    "WeightUnit": "NA",
+    "Category": "Gaming",
+    "RegularItem": false,
+    "FrequencyInDays": 1,
+    "Brand": "Sony",
+    "Image": "To be provided",
+    "PreferredStore": "Amazon"
+  }
+]

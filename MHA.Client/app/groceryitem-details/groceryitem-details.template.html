@@ -1,0 +1,37 @@
+﻿<h1>This is GroceryItems details page</h1>
+<div class="table">
+    <table class="table-bordered">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Price</td>
+                <td>MoreInformation</td>
+                <td>MeasuredBy</td>
+                <td>WeightUnit</td>
+                <td>Category</td>
+                <td>RegularItem</td>
+                <td>FrequencyInDays</td>
+                <td>Brand</td>
+                <td>Image</td>
+                <td>Preferred Store</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-model="gdc.groceryItem"> <!--ng-repeat="item in gdc.groceryItem">-->
+                <!--<td>{{item.id}}</td>-->
+                <td>{{gdc.groceryItem.name}}</td>
+                <td>{{gdc.groceryItem.price|currency}}</td>
+                <td>{{gdc.groceryItem.moreInfo}}</td>
+                <td>{{gdc.groceryItem.measuredBy}}</td>
+                <td>{{gdc.groceryItem.weightUnit}}</td>
+                <td>{{gdc.groceryItem.category}}</td>
+                <td>{{gdc.groceryItem.regularItem}}</td>
+                <td>{{gdc.groceryItem.frequencyInDays}}</td>
+                <td>{{gdc.groceryItem.brand}}</td>
+                <td>{{gdc.groceryItem.image}}</td>
+                <td>{{gdc.groceryItem.preferredstore}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
