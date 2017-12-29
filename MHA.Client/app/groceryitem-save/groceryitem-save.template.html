@@ -1,0 +1,131 @@
+﻿<form class="form-horizontal" name="itemsForm" novalidate > <!--ng-controller="groceryItemSave as gcs">-->
+    <fieldset>
+        <legend>Grocery Item Information</legend>
+        <div class="form-group" ng-class="{'has-error' :itemsForm.idName.$invalid && itemsForm.idName.$dirty}">
+            <label class="col-md-2 control-label" for="idName">Item Name:    </label>
+            <div class="col-md-4">
+                <input class="form-control"
+                id="idName"
+                name="ItemName"
+                type="text"
+                placeholder="Product Name (required)"
+                ng-model="gcs.groceyItems.name"
+                required
+                ng-minlength="4"
+                ng-maxlength="12" />
+            </div>
+        </div>
+        <div class="form-group" ng-class="{'has-error' :itemsForm.idPrice.$invalid && itemsForm.idPrice.$dirty}">
+            <label class="col-md-2 control-label" for="idName">Item Price:    </label>
+            <div class="col-md-4">
+                <input class="form-control"
+                       id="idPrice"
+                       name="ItemPrice"
+                       type="text"
+                       placeholder="Product Price "
+                       ng-model="gcs.groceyItems.price"
+                       required/>
+            </div>
+        </div>
+        <div class="form-group" ng-class="{'has-error' :itemsForm.idMinfo.$invalid && itemsForm.idMinfo.$dirty}">
+            <label class="col-md-2 control-label" for="idMinfo">More Info:   </label>
+            <div class="col-md-4">
+                <input class="form-control" id="idMinfo" name="MoreInfo"
+                       type="text"
+                       placeholder="More Information"
+                       ng-model="gcs.groceyItems.moreInfo"/>
+            </div>
+        </div>
+        <div class="form-group" ng-class="{'has-error' :itemsForm.idMeasuredBy.$invalid && itemsForm.idMeasuredBy.$dirty}">
+            <label class="col-md-2 control-label" for="idMeasuredBy">Measured By:   </label>
+            <div class="col-md-4">
+                <input class="form-control" id="idMeasuredBy" name="MeasuredBy"
+                       type="text"
+                       placeholder="Measured By"
+                       ng-model="gcs.groceyItems.measuredBy" />
+            </div>
+        </div>
+        <div class="form-group" ng-class="{'has-error' :itemsForm.idWeightUnit.$invalid && itemsForm.idWeightUnit.$dirty}">
+            <label class="col-md-2 control-label" for="idWeightUnit">Weight Unit:   </label>
+            <div class="col-md-4">
+                <input class="form-control" id="idWeightUnit" name="WeightUnit"
+                       type="text"
+                       placeholder="Weight Unit"
+                       ng-model="gcs.groceyItems.weightUnit" />
+            </div>
+        </div>
+        <div class="form-group" ng-class="{'has-error' :itemsForm.idCategory.$invalid && itemsForm.idCategory.$dirty}">
+            <label class="col-md-2 control-label" for="idCategory">Category:   </label>
+            <div class="col-md-4">
+                <input class="form-control" id="idCategory" name="Category"
+                       type="text"
+                       placeholder="Category"
+                       ng-model="gcs.groceyItems.category" />
+            </div>
+        </div>
+        <div class="form-group" ng-class="{'has-error' :itemsForm.idRegularItem.$invalid && itemsForm.idRegularItem.$dirty}">
+            <label class="col-md-2 control-label" for="idRegularItem">Regular Item:   </label>
+            <div class="col-md-4">
+                <input class="form-control" id="idRegularItem" name="RegularItem"
+                       type="text"
+                       placeholder="Regular Item"
+                       ng-model="gcs.groceyItems.regularItem" />
+            </div>
+        </div>
+        <div class="form-group" ng-class="{'has-error' :itemsForm.idFrequency.$invalid && itemsForm.idFrequency.$dirty}">
+            <label class="col-md-2 control-label" for="idFrequency">Frequency:   </label>
+            <div class="col-md-4">
+                <input class="form-control" id="idFrequency" name="Frequency"
+                       type="text"
+                       placeholder="Frequency"
+                       ng-model="gcs.groceyItems.frequencyInDays" />
+            </div>
+        </div>
+        <div class="form-group" ng-class="{'has-error' :itemsForm.idBrand.$invalid && itemsForm.idBrand.$dirty}">
+            <label class="col-md-2 control-label" for="idBrand">Brand:   </label>
+            <div class="col-md-4">
+                <input class="form-control" id="idBrand" name="Brand"
+                       type="text"
+                       placeholder="Brand"
+                       ng-model="gcs.groceyItems.brand" />
+            </div>
+        </div>
+        <div class="form-group" ng-class="{'has-error' :itemsForm.idImage.$invalid && itemsForm.idImage.$dirty}">
+            <label class="col-md-2 control-label" for="idImage">Image:   </label>
+            <div class="col-md-4">
+                <input class="form-control" id="idImage" name="Image"
+                       type="text"
+                       placeholder="Image"
+                       ng-model="gcs.groceyItems.image" />
+            </div>
+        </div>
+        <div class="form-group" ng-class="{'has-error' :itemsForm.idPreferredstore.$invalid && itemsForm.idPreferredstore.$dirty}">
+            <label class="col-md-2 control-label" for="idPreferredstore">Preferred Store:   </label>
+            <div class="col-md-4">
+                <input class="form-control" id="idPreferredstoreImage" name="Image"
+                       type="text"
+                       placeholder="Preferred Store"
+                       ng-model="gcs.groceyItems.preferredStore" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-4 col-md-offset-2">
+                <span>
+                    <button class="btn btn-primary"
+                            style="width:80px;margin-right:10px"
+                            ng-click="gcs.submit()"
+                            ng-disabled="itemsForm.$invalid">
+                        Save
+                    </button>
+                </span>
+                <span>
+                    <button class="btn btn-default"
+                            style="width:70px"
+                            ng-click="gcs.cancel(itemsForm)">
+                        Cancel
+                    </button>
+                </span>
+            </div>
+        </div>
+    </fieldset>
+</form>

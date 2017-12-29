@@ -1,0 +1,37 @@
+﻿<h1>This is GroceryItems details page</h1>
+<div class="table">
+    <table class="table-bordered">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Price</td>
+                <td>MoreInformation</td>
+                <td>MeasuredBy</td>
+                <td>WeightUnit</td>
+                <td>Category</td>
+                <td>RegularItem</td>
+                <td>FrequencyInDays</td>
+                <td>Brand</td>
+                <td>Image</td>
+                <td>Preferred Store</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in gdc.groceryItem">
+                <!--<td>{{item.id}}</td>-->
+                <td>{{item.name}}</td>
+                <td>{{item.price|currency}}</td>
+                <td>{{item.moreInfo}}</td>
+                <td>{{item.measuredBy}}</td>
+                <td>{{item.weightUnit}}</td>
+                <td>{{item.category}}</td>
+                <td>{{item.regularItem}}</td>
+                <td>{{item.frequencyInDays}}</td>
+                <td>{{item.brand}}</td>
+                <td>{{item.image}}</td>
+                <td>{{item.preferredstore}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

@@ -1,0 +1,32 @@
+﻿<div class="panel panel-primary">
+    <div class="panel-body">
+        <h1>This is Grocery Items table</h1>
+        <table class="table-bordered" title="Grocery Items">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Price</td>
+                    <td>MoreInformation</td>
+                    <td>MeasuredBy</td>
+                    <td>WeightUnit</td>
+                    <td>Category</td>
+                    <td>RegularItem</td>
+                    <td>FrequencyInDays</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in glc.groceryItems">
+                    <td><a href="#!/groceryList/{{item.id}}">{{item.name}}</a></td>
+                    <td>{{item.price|currency}}</td>
+                    <td>{{item.moreInfo}}</td>
+                    <td>{{item.measuredBy}}</td>
+                    <td>{{item.weightUnit}}</td>
+                    <td>{{item.category}}</td>
+                    <td>{{item.regularItem}}</td>
+                    <td>{{item.frequencyInDays}}</td>
+                    <td><a href="#!/groceryEdit/{{item.id}}">Edit</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
