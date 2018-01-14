@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 using Newtonsoft.Json.Serialization;
+using System.Web.Http.Cors;
 
 namespace MHA.WebAPI
 {
@@ -14,7 +15,7 @@ namespace MHA.WebAPI
 
             // Web API routes
             config.MapHttpAttributeRoutes();
-
+            var cors = new EnableCorsAttribute("*", "*", "*");
             config.EnableCors();
 
             config.Formatters.JsonFormatter.SerializerSettings.ContractResolver =

@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHA.WebAPI", "MHA.WebAPI\MHA.WebAPI.csproj", "{E04F2317-A818-41D3-80B4-EF702ECF46E0}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MHA.Client", "MHA.Client\", "{8758D050-1528-4CC6-AC22-7094D0816605}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MHA.Client(1)", "MHA.Client\", "{FADDF2FD-4F34-498D-A8CB-AFB6A2FC3471}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_23568"
@@ -36,10 +36,10 @@ Global
 		{E04F2317-A818-41D3-80B4-EF702ECF46E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E04F2317-A818-41D3-80B4-EF702ECF46E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E04F2317-A818-41D3-80B4-EF702ECF46E0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8758D050-1528-4CC6-AC22-7094D0816605}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8758D050-1528-4CC6-AC22-7094D0816605}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8758D050-1528-4CC6-AC22-7094D0816605}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{8758D050-1528-4CC6-AC22-7094D0816605}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{FADDF2FD-4F34-498D-A8CB-AFB6A2FC3471}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FADDF2FD-4F34-498D-A8CB-AFB6A2FC3471}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FADDF2FD-4F34-498D-A8CB-AFB6A2FC3471}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{FADDF2FD-4F34-498D-A8CB-AFB6A2FC3471}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

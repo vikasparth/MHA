@@ -30,8 +30,10 @@ namespace MHA.WebAPI.Providers
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {
             var userManager = context.OwinContext.GetUserManager<ApplicationUserManager>();
-
+            context.OwinContext.Response.Headers.Add("Access-Control-Allow-Methods", new[] { "GET", "POST", "DELETE, PUT", "OPTIONS", "HEAD" });
+            context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
             ApplicationUser user = await userManager.FindAsync(context.UserName, context.Password);
+           
 
             if (user == null)
             {

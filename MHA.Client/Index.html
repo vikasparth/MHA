@@ -23,12 +23,30 @@
     <script src="app/groceryitem-details/groceryitem-details.component.js"></script>
     <script src="app/groceryitem-save/groceryitem-save.module.js"></script>
     <script src="app/groceryitem-save/groceryitem-save.component.js"></script>
+    <script src="app/LoginCtrl.js"></script>
+    <script src="app/common.services/userAccount.js"></script>
 
 </head>
 <body ng-app="mhaApp">
-
-    Hello There
-    <div ng-view>
+    <nav class="navbar navbar-default" ng-controller="LoginCtrl as lc">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="navbar-brand">Managing Home Accounts</div>
+                <form ng-hide="lc.isLoggedIn" class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="username(email)" ng-model="lc.userData.email"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="password" ng-model="lc.userData.password" />
+                    </div>
+                    <button type="submit" class="btn btn-default" ng-click="lc.login()">Login</button>
+                    <button type="submit" class="btn btn-default" ng-click="lc.registerUser()">Register</button>
+                    <div ng-show="lc.message">{{lc.message}}</div>
+                </form>
+            </div>
+        </div>
+    </nav>    
+    <div ng-if="lc.isLoggedIn" ng-view>
         <!--<grocery-items-list></grocery-items-list>-->
     </div>
     

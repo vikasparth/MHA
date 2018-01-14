@@ -11,7 +11,8 @@ namespace MHA.WebAPI.Controllers
         public ActionResult Index()
         {
             ViewBag.Title = "Home Page";
-
+            int[] arr = new int[10];
+            Array.BinarySearch(arr,30);
             return View();
         }
     }
